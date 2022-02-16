@@ -67,7 +67,7 @@ class _PersonsScreenState extends State<PersonsScreen> {
               child: Image.network(
                 imageUrl,
                 loadingBuilder: _imageLoadingBuilder,
-                //  TODO: Add error builder
+                //  TODO: add error builder
               ),
             ),
           ),

@@ -9,6 +9,11 @@ class EpisodesScreen extends StatefulWidget {
 }
 
 class _EpisodesScreenState extends State<EpisodesScreen> {
+  void _getEpisodes() {
+    // TODO(Zemtsova): *implement loading logic
+    // Hint: use a debug mode and breakpoints to testing your function
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,19 +21,16 @@ class _EpisodesScreenState extends State<EpisodesScreen> {
         title: const Text('Episodes'),
         actions: [
           IconButton(
-            icon: Icon(Icons.clear),
-            onPressed: () {
-              //  TODO: implement clear logic
-            },
+            icon: const Icon(Icons.clear),
+            onPressed: _getEpisodes,
           )
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // TODO: implement loading logic
-        },
-        child: Icon(Icons.download_outlined),
+        onPressed: _getEpisodes,
+        child: const Icon(Icons.download_outlined),
       ),
+      // TODO: add ListView.builder to show list of episodes
       body: const Center(child: Text('Episodes list will be soon')),
     );
   }
